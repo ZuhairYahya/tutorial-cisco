@@ -1,0 +1,16 @@
+Router 1
+
+Configuring the router by adding an IP address that points to router 0 or router 2. By configuring through the Fast Ethernet 0/0 interface used on router 1 that leads to the router 2. The purpose of the Fast Ethernet 0/0 interface itself is that we consider it the router has 2 gates to enter router 2, and fa0 / 0 is as a gateway to enter router 2. And also likewise with fa1 / 0 is as a gate to enter router 0.
+Then enter the ip address and subnet mask used on that ip address. On fa0 / 0 use the ip address 12.12.12.2 with the subnet mask 255.255.255.252. Then for fa1 / 0 use the ip address 10.10.10.2 with the subnet mask 255.255.255.252. Next do the command no sh (no shutdown) which is a command to activate the administrative interface so that the cable that leads to the router port will be active and green.
+
+Router 0
+
+Configure the router by adding the IP address that leads to router 1 and to the client that passes the switch. By configuring through the Fast Ethernet 0/0 interface that is used on router 0 that leads to router 1. And also configuring via the Fast Ethernet 1/0 interface that is used router 0 that points to the client.
+Then enter the ip address and subnet mask used on that ip address. On fa0 / 0 use the ip address 10.10.10.1 with the subnet mask 255.255.255.252. Then for fa1 / 0 use the ip address 192.168.1.1 with the subnet mask 255.255.255.224. Next do the command no sh (no shutdown) which is a command to activate the administrative interface so that the cable that leads to the router port will be active and green.
+
+Router 2
+
+Configure the router by adding the IP address that leads to router 1 and to the client that passes the switch. By configuring through the Fast Ethernet 0/0 interface used on router 2 that leads to router 1. And also configuring via the Fast Ethernet 1/0 interface that is used router 2 that points to the client.
+Then enter the ip address and subnet mask used on that ip address. On fa0 / 0 use the ip address 12.12.12.1 with the subnet mask 255.255.255.252. Then for fa1 / 0 use the ip address 192.168.2.1 with the subnet mask 255.255.255.224. Next do the command no sh (no shutdown) which is a command to activate the administrative interface so that the cable that leads to the router port will be active and green.
+
+After configuring the router, then configuring the client will be able to connect to the same network.
